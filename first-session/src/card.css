@@ -1,0 +1,11 @@
+.Card-container {
+    padding: 15px;
+    background-color:#fff;
+    width:400px;   
+    height: 200px;
+}
+
+label, p {
+    color: black;
+    padding:5px;
+}
