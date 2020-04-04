@@ -1,0 +1,18 @@
+.category-wrapper {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 300px;
+}
+
+.category {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

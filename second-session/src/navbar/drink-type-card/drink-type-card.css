@@ -1,0 +1,10 @@
+.cocktail-type-card {
+    display:flex;
+    background-color: gray;
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
