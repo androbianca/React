@@ -3,8 +3,14 @@ import DrinkTypeCard from "./drink-type-card/drink-type-card";
 import './navbar.css';
 
 function Navbar() {
-    const cocktailTypes = ['Alcoholic', 'Non Alcoholic', 'Ordinary Drink', 'Cocktail glass', 'Champagne flute'];
-    const cocktailList = cocktailTypes.map((cocktail, index) => <DrinkTypeCard name={cocktail} key={index} />);
+    const cocktailTypes = [
+        {name:'Alcoholic', route:'alcoholic'}, 
+        {name:'Non Alcoholic', route:'non-alcoholic'}, 
+        {name:'Ordinary Drink', route:'ordinarydrink'},
+        {name:'Cocktail glass', route:'cocktailglass'},
+        {name: 'Champagne flute', route:'champagne'}];
+  
+        const cocktailList = cocktailTypes.map((cocktail, index) => <DrinkTypeCard name={cocktail.name} route={cocktail.route} key={index} />);
 
     return (
         <div className="navbar">

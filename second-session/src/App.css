@@ -17,3 +17,11 @@ img {
   height: 50px;
   width: 100px;
 }
+
+.cocktail-list {
+  display: inline-flex;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap:  wrap;
+}

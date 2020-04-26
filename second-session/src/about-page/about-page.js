@@ -17,4 +17,4 @@ const AboutPage = props => {
 
 export default AboutPage;
 
-const BackButton = (withRouter(({ history }) => <button className = "undo-button" onClick={() => { history.push('/') }}>Back</button>))
+const BackButton = (withRouter(({ history }) => <button className = "undo-button" onClick={() => { history.goBack() }}>Back</button>))

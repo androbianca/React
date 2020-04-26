@@ -28,8 +28,9 @@ export default class CategorySection extends React.Component {
   }
 
   render() {
+    const isMainPage = true;
     const list = this.state.cocktails.slice(0, 4).map((cocktail, index) => 
-    <CategoryCard {...cocktail} key={index} toggle={this.toggle}/>)
+    <CategoryCard {...cocktail} isMainPage={isMainPage} key={index} toggle={this.toggle}/>)
 
     return !this.state.displayDetails 
     ? (

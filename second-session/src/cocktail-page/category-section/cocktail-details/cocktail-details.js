@@ -11,8 +11,6 @@ const CocktailDetails = ({ strDrink, strDrinkThumb, idDrink, toggle }) => {
 
       <div className="second-section"> <p className="text">{strDrink}</p>
         <p className="text">{idDrink}</p></div>
-
-
     </div>)
 }
 

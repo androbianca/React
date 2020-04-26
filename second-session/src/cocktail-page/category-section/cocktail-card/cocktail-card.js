@@ -3,22 +3,20 @@ import React from 'react';
 import './cocktail-card.css';
 
 export default class CategoryCard extends React.Component {
-    constructor(props) {
-      super(props)
-    }
-  
+   
     render() {
       return (<div className="category">
         <ImgWithRoute {...this.props} />
-        <p onClick={
-          () => this.props.toggle({...this.props})}>{this.props.strDrink}</p>
+        {this.props.isMainPage
+        ?  <p onClick={() => this.props.toggle({...this.props})}>{this.props.strDrink}</p>
+        :  <p>{this.props.strDrink}</p>
+      }
       </div>) 
     }
   }
   
-
-  const ImgWithRoute = withRouter(({ history, strDrinkThumb, strDrink }) => {
+  const ImgWithRoute = withRouter(({ history, strDrinkThumb, strDrink,idDrink  }) => {
     return (
-      <img src={strDrinkThumb} onClick={() => { history.push('/about', { strDrink, strDrinkThumb }) }}></img>
+      <img src={strDrinkThumb} onClick={() => { history.push(`${history.location.pathname}/cocktail/${idDrink}`, { strDrink, strDrinkThumb }) }}></img>
     )
   });

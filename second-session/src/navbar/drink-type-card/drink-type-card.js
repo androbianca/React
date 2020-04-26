@@ -1,5 +1,6 @@
 import React from 'react';
 import './drink-type-card.css';
+import {Link} from 'react-router-dom';
 
 export default class DrinkTypeCard extends React.Component {
     constructor(props) {
@@ -10,7 +11,7 @@ export default class DrinkTypeCard extends React.Component {
     render() {
         return (
             <div className="cocktail-type-card">
-                {this.props.name}
+               <Link to={this.props.route}>{this.props.name}</Link> 
             </div>
         );
     }
